@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-attachment: fixed;
+}
+
+.todo-app {
+    background-color: #f5f5f5; /* Light gray background */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color:#77ddd5;
+}
+
+.todo-app h2 {
+    font-size: 24px;
+    
+    color: #fafffd;
+    margin-bottom: 20px;
+    display: block;
+    background: #77ddd5;
+    text-align: center;
+}
+
+.todo-app h2 img {
+    margin-left: 10px;
+    height: 24px;
+    width: 24px;
+}
+
+.todo-app .row {
+    display: block;
+    align-items: center;
+}
+
+#input-box {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: #0fe198; /* Light gray border */
+    border-radius: 30px;
+    width: 300px;
+    color: #27ae60;
+    background-color: #5dfff0;
+}
+
+button {
+    padding: 10px 20px;
+    color: #27ae60;
+    background-color: #5dfff0;
+    
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+     background-color: #27ae60; /* Green button */
+    color: #5dfff0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 17px;
+    padding: 16px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #27ae60; /* Green border */
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-color: #27ae60; /* Green checkmark */
+    content: '\2713'; /* Unicode character for checkmark */
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+}
+
+ul li span {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #27ae60; /* Red delete button */
+    font-weight: bold;
+    font-size: 30px;
+}
+
+ul li span:hover {
+    background-color: #27ae60; /* Red background on hover */
+    color: #5dfff0;
+}
