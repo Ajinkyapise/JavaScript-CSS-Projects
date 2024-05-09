@@ -1,0 +1,105 @@
+/* General body styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #8c8cdf;
+  background-image: linear-gradient(
+    to bottom right,
+    #40407d,
+    #e4e5e9
+  ); /* subtle gradient */
+}
+
+/* Container styling */
+.container {
+  width: 90%;
+  max-width: 400px;
+  background: #fd8d8d; /* pure white background */
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* softer shadow */
+  border-radius: 10px; /* slightly rounded edges for a modern look */
+  text-align: center;
+}
+
+/* Input and button styling */
+input,
+button {
+  width: 100%;
+  padding: 12px; /* increased padding for better touch interaction */
+  margin-top: 12px; /* uniform margin */
+  border-radius: 8px; /* consistent border radius */
+  border: 2px solid #ccc; /* lighter border */
+  transition: all 0.3s ease; /* smooth transition for all states */
+}
+
+input:focus,
+button:focus {
+  outline: none;
+  border-color: #0066cc; /* brighter focus color */
+  box-shadow: 0 0 8px rgba(0, 102, 204, 0.5); /* subtle glow on focus */
+}
+
+input.error {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  border-color: #ff4500; /* brighter error color */
+}
+
+button {
+  background-color: #f74545; /* unchanged */
+  color: rgb(125, 216, 14);
+  font-size: 16px;
+  cursor: pointer;
+  border: none; /* remove border */
+}
+
+button:hover {
+  background-color: rgb(125, 216, 14); /* unchanged */
+  color: #f0740d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* add shadow on hover */
+}
+
+/* Animation keyframes for input error */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* QR image box styling */
+#imgBox {
+  margin-top: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out; /* smoother transition for opening and closing */
+}
+#text {
+  width: -webkit-fill-available;
+}
+
+#imgBox img {
+  padding: 10px; /* space around the image */
+  background: #fff; /* background to separate image from container */
+  border-radius: 8px; /* rounded corners for the image */
+}
+
+#imgBox.show-img {
+  max-height: 400px; /* adjusted max-height */
+}
