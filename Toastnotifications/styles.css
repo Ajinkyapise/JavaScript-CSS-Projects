@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: opacity 0.3s;
+  background-color: #007bff; /* Default blue */
+}
+
+.buttons button:hover {
+  opacity: 0.8;
+}
+
+/* Specific styles for different buttons */
+.buttons button:nth-child(1) {
+  background-color: #4caf50; /* Green for success */
+}
+
+.buttons button:nth-child(2) {
+  background-color: #f44336; /* Red for error */
+}
+
+.buttons button:nth-child(3) {
+  background-color: #ff9800; /* Orange for invalid */
+}
+
+#toast-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toast {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+
+  transition: opacity 0.5s, transform 0.5s;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  transform: translateX(100%);
+  animation: moveleft 0.5s linear forwards;
+}
+@keyframes moveleft {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.toast.Error {
+  background-color: #f44336;
+}
+.toast.Invalid {
+  background-color: #e78a09;
+}
+.toast::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  animation: anim 5s linear forwards;
+}
+@keyframes anim {
+  100% {
+    width: 0;
+  }
+}
