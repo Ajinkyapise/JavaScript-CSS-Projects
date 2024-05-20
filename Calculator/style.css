@@ -1,0 +1,100 @@
+/* style.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 1200px;
+}
+
+.calculator {
+  background-color: #1ed77a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  width: 500px;
+  background-color: burlywood;
+}
+
+input[type="text"] {
+  width: 96%;
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 10px;
+  text-align: right;
+  background-color: #e1abab;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-bottom: 2px solid #007bff;
+}
+
+input[type="button"] {
+  width: 22%;
+  padding: 20px;
+  font-size: 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #33c5e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="button"].btn {
+  background-color: #3690eb;
+}
+
+input[type="button"].btn-operator {
+  background-color: #ffd700;
+}
+
+input[type="button"].btn-operator:hover {
+  background-color: #ffc107;
+}
+
+input[type="button"].equal-btn {
+  width: 48%;
+  background-color: #28a745;
+  color: white;
+}
+
+input[type="button"].equal-btn:hover {
+  background-color: #218838;
+}
+
+input[type="button"].btn-clear {
+  background-color: #dc3545;
+  color: white;
+}
+
+input[type="button"].btn-clear:hover {
+  background-color: #c82333;
+}
+
+input[type="button"]:hover {
+  background-color: #e2e6ea;
+  transform: scale(1.05);
+}
+
+input[type="button"]:active {
+  background-color: #d0d4d7;
+}
